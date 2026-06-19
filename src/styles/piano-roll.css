@@ -1,0 +1,85 @@
+.piano-roll-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.piano-roll-header {
+  height: 40px;
+  background-color: var(--bg-panel);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.piano-roll-editor-body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.piano-roll-keys {
+  width: 60px;
+  background-color: var(--bg-panel);
+  border-right: 1px solid var(--border-color);
+  overflow-y: auto;
+}
+
+.piano-key {
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 4px;
+  font-size: 0.65rem;
+  font-weight: 600;
+}
+
+.piano-key.white {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.piano-key.black {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.piano-roll-grid-container {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+  background-color: #11141c;
+}
+
+.piano-roll-grid-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.piano-roll-notes-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.piano-note-box {
+  position: absolute;
+  background-color: var(--primary-color);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.piano-note-box:hover {
+  background-color: var(--primary-hover);
+}

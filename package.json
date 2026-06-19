@@ -1,0 +1,16 @@
+{
+  "name": "music-studio-pro",
+  "version": "1.0.0",
+  "description": "Professional Music Production Studio",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "vite": "^5.0.8"
+  }
+}

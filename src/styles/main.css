@@ -1,0 +1,243 @@
+:root {
+  --bg-dark: #0f1115;
+  --bg-panel: #161920;
+  --bg-active: #222631;
+  --border-color: #2b303d;
+  
+  --primary-color: #4ECDC4;
+  --primary-hover: #3db8af;
+  --accent-color: #FF6B6B;
+  --text-color: #e2e8f0;
+  --text-muted: #8a93a7;
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-color);
+  font-family: var(--font-sans);
+  overflow: hidden;
+  height: 100vh;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Splash Screen */
+#splash-screen {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, #1b2030 0%, var(--bg-dark) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.splash-content {
+  text-align: center;
+}
+
+.splash-logo {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.splash-logo h1 {
+  font-weight: 700;
+  color: #fff;
+}
+
+.splash-features {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+/* Layout */
+#studio {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.topnav {
+  height: 60px;
+  background-color: var(--bg-panel);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+}
+
+.brand-icon {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.topnav-center {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.transport-bar {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.transport-btn {
+  background: none;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.transport-btn.active {
+  background-color: var(--primary-color);
+  color: #000;
+}
+
+.bpm-widget {
+  display: flex;
+  align-items: center;
+}
+
+.bpm-display input {
+  background: none;
+  border: none;
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  width: 60px;
+  text-align: center;
+}
+
+.time-widget {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #000;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.nav-btn {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.nav-btn.primary {
+  background-color: var(--primary-color);
+  color: #000;
+  border: none;
+}
+
+/* Studio Area */
+.studio-main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.left-panel {
+  width: 300px;
+  background-color: var(--bg-panel);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--bg-dark);
+}
+
+/* Modal Styling */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  width: 500px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
