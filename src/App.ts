@@ -56,7 +56,7 @@ export class App {
     startBtn.addEventListener('click', async () => {
       await this.audioEngine.init();
       this.transport.init();
-      await this.midiEngine.init();
+      this.midiEngine.init(); // Initialize asynchronously in the background
 
       splash.classList.add('hidden');
       studio.classList.remove('hidden');
